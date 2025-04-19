@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'Slave2'}
     
     tools {
         maven 'Maven 3.6.3'
@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch:'main', url:'https://github.com/AmitPrajapati9401/jenkinsjavacoderepo.git'  // Replace with actual repo
+                git branch: 'main',url:'https://github.com/AmitPrajapati9401/jenkinsjavacoderepo.git'  // Replace with actual repo
             }
         }
 
