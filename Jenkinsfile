@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('my-app') {  // Change to actual repo folder
+                dir('Javarepo1') {  // Change to actual repo folder
                     bat 'mvn clean package'
                 }
             }
